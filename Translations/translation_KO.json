@@ -109,16 +109,16 @@
   },
   "menuValues": {
     "USBPDModeDefault": {
-      "displayText": "기본 모드"
+      "displayText": "Default\nMode"
     },
     "USBPDModeNoDynamic": {
       "displayText": "No\nDynamic"
     },
     "USBPDModeSafe": {
-      "displayText": "안전 모드"
+      "displayText": "Safe\nMode"
     },
     "TipTypeAuto": {
-      "displayText": "자동 감지"
+      "displayText": "Auto\nSense"
     },
     "TipTypeT12Long": {
       "displayText": "TS100\nLong"
@@ -156,12 +156,12 @@
       "description": "QC 충전기 최대 허용 전압"
     },
     "PDNegTimeout": {
-      "displayText": "PD\ntimeout",
+      "displayText": "PD시간",
       "description": "PD 프로토콜 협상 타임아웃"
     },
     "USBPDMode": {
-      "displayText": "PD\nVPDO",
-      "description": "USB PD 가변 전압 모드"
+      "displayText": "PD\nMode",
+      "description": "USB PD 동작 모드 설정"
     },
     "BoostTemperature": {
       "displayText": "부스트온도",
@@ -260,7 +260,7 @@
       "description": "홀 효과 센서 스탠드 감도"
     },
     "HallEffSleepTimeout": {
-      "displayText": "HallSensor\nSleepTime",
+      "displayText": "홀대기시간",
       "description": "홀 센서 감지 시 절전 진입 타이머"
     },
     "TemperatureUnit": {
