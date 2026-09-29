@@ -1,0 +1,98 @@
+name: Build Pinecil V2 Korean Firmware
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-korean-firmware:
+    runs-on: ubuntu-latest
+    container:
+      image: alpine:3.21
+
+    steps:
+      - name: Install Toolchain and Dependencies
+        run: |
+          apk add --no-cache \
+            gcc-riscv-none-elf \
+            g++-riscv-none-elf \
+            newlib-riscv-none-elf \
+            python3 \
+            py3-pip \
+            make \
+            git \
+            bash \
+            findutils \
+            curl \
+            zip
+
+      - name: Install Python Packages
+        run: |
+          python3 -m pip install --break-system-packages bdflib pyyaml pillow
+
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Git ownership fix
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
+      - name: Setup Korean Font and Patch Pipeline
+        run: |
+          # 1. Download Galmuri11 font
+          curl -L -s -o Translations/Galmuri11.ttf https://raw.githubusercontent.com/quiple/galmuri/master/dist/Galmuri11.ttf
+
+          # 2. Patch make_translation.py to support Korean TTF rasterization
+          python3 -c '
+          with open("Translations/make_translation.py", "r", encoding="utf-8") as f:
+              code = f.read()
+          
+          patch = """
+          def get_hangul_glyph(sym: str):
+              font_path = os.path.join(HERE, "Galmuri11.ttf")
+              if not os.path.exists(font_path):
+                  return None
+              try:
+                  from PIL import Image, ImageFont, ImageDraw
+                  font = ImageFont.truetype(font_path, 11)
+                  img = Image.new("1", (12, 16), color=0)
+                  draw = ImageDraw.Draw(img)
+                  draw.text((0, 1), sym, font=font, fill=1)
+                  bs = bytearray()
+                  for block in range(2):
+                      for c in range(12):
+                          b = 0
+                          for r in range(8):
+                              if img.getpixel((c, r + 8 * block)):
+                                  b |= (0x01 << r)
+                          bs.append(b)
+                  return bytes(bs)
+              except Exception:
+                  return None
+
+          def get_cjk_glyph(sym: str):
+              if 0xAC00 <= ord(sym) <= 0xD7A3 or 0x1100 <= ord(sym) <= 0x11FF or 0x3130 <= ord(sym) <= 0x318F:
+                  h = get_hangul_glyph(sym)
+                  if h is not None:
+                      return h
+          """
+          target = "def get_cjk_glyph(sym: str) -> Optional[bytes]:"
+          if target in code:
+              code = code.replace(target, patch)
+              with open("Translations/make_translation.py", "w", encoding="utf-8") as f:
+                  f.write(code)
+              print("Successfully patched Translations/make_translation.py")
+          '
+
+      - name: Compile Pinecil V2 Korean Firmware
+        run: |
+          cd source
+          make firmware-KO model=Pinecilv2
+
+      - name: Upload Pinecil V2 Korean Firmware (.bin)
+        uses: actions/upload-artifact@v4
+        with:
+          name: Pinecilv2_KO_Firmware
+          path: |
+            source/Hexfile/Pinecilv2_KO.bin
+            source/Hexfile/Pinecilv2_KO.elf
