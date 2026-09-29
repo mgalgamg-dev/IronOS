@@ -1,0 +1,363 @@
+{
+  "languageCode": "KO",
+  "languageLocalName": "한국어",
+  "tempUnitFahrenheit": false,
+  "messagesWarn": {
+    "CalibrationDone": {
+      "message": "보정 완료"
+    },
+    "ResetOKMessage": {
+      "message": "초기화 완료"
+    },
+    "SettingsResetMessage": {
+      "message": "Certain settings\nchanged!"
+    },
+    "NoAccelerometerMessage": {
+      "message": "모션센서 없음"
+    },
+    "NoPowerDeliveryMessage": {
+      "message": "PD 미지원"
+    },
+    "LockingKeysString": {
+      "message": "버튼 잠금"
+    },
+    "UnlockingKeysString": {
+      "message": "잠금 해제"
+    },
+    "WarningKeysLockedString": {
+      "message": "잠김상태:해제+"
+    },
+    "WarningThermalRunaway": {
+      "message": "열폭주 경고"
+    },
+    "WarningTipShorted": {
+      "message": "팁 쇼트 감지"
+    },
+    "SettingsCalibrationWarning": {
+      "message": "보정 전 냉각"
+    },
+    "CJCCalibrating": {
+      "message": "센서 보정중"
+    },
+    "SettingsResetWarning": {
+      "message": "초기화 진행중"
+    },
+    "UVLOWarningString": {
+      "message": "DC 전압 부족"
+    },
+    "UndervoltageString": {
+      "message": "저전압 경고"
+    },
+    "InputVoltageString": {
+      "message": "VIN: \n"
+    },
+    "SleepingAdvancedString": {
+      "message": "Sleeping..."
+    },
+    "SleepingTipAdvancedString": {
+      "message": "Tip: "
+    },
+    "ProfilePreheatString": {
+      "message": "예열 진행중"
+    },
+    "ProfileCooldownString": {
+      "message": "냉각 진행중"
+    },
+    "DeviceFailedValidationWarning": {
+      "message": "정품인증 실패"
+    },
+    "TooHotToStartProfileWarning": {
+      "message": "고온 프로파일 불가"
+    }
+  },
+  "characters": {
+    "SettingRightChar": "R",
+    "SettingLeftChar": "L",
+    "SettingAutoChar": "A",
+    "SettingSlowChar": "S",
+    "SettingMediumChar": "M",
+    "SettingFastChar": "F",
+    "SettingStartSolderingChar": "S",
+    "SettingStartSleepChar": "Z",
+    "SettingStartSleepOffChar": "R",
+    "SettingLockBoostChar": "B",
+    "SettingLockFullChar": "F",
+    "SettingBLEOnChar": "+",
+    "SettingBLEReadOnlyChar": "R"
+  },
+  "menuGroups": {
+    "PowerMenu": {
+      "displayText": "Power\nsettings",
+      "description": ""
+    },
+    "SolderingMenu": {
+      "displayText": "Soldering\nsettings",
+      "description": ""
+    },
+    "PowerSavingMenu": {
+      "displayText": "Sleep\nmode",
+      "description": ""
+    },
+    "UIMenu": {
+      "displayText": "User\ninterface",
+      "description": ""
+    },
+    "AdvancedMenu": {
+      "displayText": "Advanced\nsettings",
+      "description": ""
+    }
+  },
+  "menuValues": {
+    "USBPDModeDefault": {
+      "displayText": "Default\nMode"
+    },
+    "USBPDModeNoDynamic": {
+      "displayText": "No\nDynamic"
+    },
+    "USBPDModeSafe": {
+      "displayText": "Safe\nMode"
+    },
+    "TipTypeAuto": {
+      "displayText": "Auto\nSense"
+    },
+    "TipTypeT12Long": {
+      "displayText": "TS100\nLong"
+    },
+    "TipTypeT12Short": {
+      "displayText": "Pine\nShort"
+    },
+    "TipTypeT12PTS": {
+      "displayText": "PTS\n200"
+    },
+    "TipTypeTS80": {
+      "displayText": "TS80\n"
+    },
+    "TipTypeJBCC210": {
+      "displayText": "JBC\nC210"
+    },
+    "TipTypeC245Stock": {
+      "displayText": "Stock\n5.5Ω"
+    },
+    "TipTypeC245JBC": {
+      "displayText": "JBC\n2.5Ω"
+    }
+  },
+  "menuOptions": {
+    "DCInCutoff": {
+      "displayText": "전원차단",
+      "description": "배터리 방전 방지 차단 전압"
+    },
+    "MinVolCell": {
+      "displayText": "최저전압",
+      "description": "셀당 최저 허용 전압 설정"
+    },
+    "QCMaxVoltage": {
+      "displayText": "QC최대전압",
+      "description": "QC 충전기 최대 허용 전압"
+    },
+    "PDNegTimeout": {
+      "displayText": "PD\ntimeout",
+      "description": "PD 프로토콜 협상 타임아웃"
+    },
+    "USBPDMode": {
+      "displayText": "PD\nVPDO",
+      "description": "USB PD 가변 전압 모드"
+    },
+    "BoostTemperature": {
+      "displayText": "부스트온도",
+      "description": "부스트 모드 시 목표 온도"
+    },
+    "AutoStart": {
+      "displayText": "자동시작",
+      "description": "전원 인가 시 자동 가열 시작"
+    },
+    "TempChangeShortStep": {
+      "displayText": "온도단위",
+      "description": "버튼 짧게 누름 시 온도 증감 단위"
+    },
+    "TempChangeLongStep": {
+      "displayText": "온도큰단위",
+      "description": "버튼 길게 누름 시 온도 증감 단위"
+    },
+    "LockingMode": {
+      "displayText": "잠금모드",
+      "description": "버튼 잠금 기능 활성화"
+    },
+    "ProfilePhases": {
+      "displayText": "단계수",
+      "description": "리플로우 프로파일 동작 단계 수"
+    },
+    "ProfilePreheatTemp": {
+      "displayText": "예열온도",
+      "description": "프로파일 예열 목표 온도"
+    },
+    "ProfilePreheatSpeed": {
+      "displayText": "예열속도",
+      "description": "초당 예열 온도 상승 속도"
+    },
+    "ProfilePhase1Temp": {
+      "displayText": "1단온도",
+      "description": "1단계 목표 유지 온도"
+    },
+    "ProfilePhase1Duration": {
+      "displayText": "1단시간",
+      "description": "1단계 목표 유지 시간"
+    },
+    "ProfilePhase2Temp": {
+      "displayText": "2단온도",
+      "description": "2단계 목표 유지 온도"
+    },
+    "ProfilePhase2Duration": {
+      "displayText": "2단시간",
+      "description": "2단계 목표 유지 시간"
+    },
+    "ProfilePhase3Temp": {
+      "displayText": "3단온도",
+      "description": "3단계 목표 유지 온도"
+    },
+    "ProfilePhase3Duration": {
+      "displayText": "3단시간",
+      "description": "3단계 목표 유지 시간"
+    },
+    "ProfilePhase4Temp": {
+      "displayText": "4단온도",
+      "description": "4단계 목표 유지 온도"
+    },
+    "ProfilePhase4Duration": {
+      "displayText": "4단시간",
+      "description": "4단계 목표 유지 시간"
+    },
+    "ProfilePhase5Temp": {
+      "displayText": "5단온도",
+      "description": "5단계 목표 유지 온도"
+    },
+    "ProfilePhase5Duration": {
+      "displayText": "5단시간",
+      "description": "5단계 목표 유지 시간"
+    },
+    "ProfileCooldownSpeed": {
+      "displayText": "냉각속도",
+      "description": "초당 목표 냉각 속도"
+    },
+    "MotionSensitivity": {
+      "displayText": "모션감도",
+      "description": "움직임 감지 센서 민감도"
+    },
+    "SleepTemperature": {
+      "displayText": "대기온도",
+      "description": "절전 대기 진입 시 목표 온도"
+    },
+    "SleepTimeout": {
+      "displayText": "대기시간",
+      "description": "절전 모드 진입 타이머"
+    },
+    "ShutdownTimeout": {
+      "displayText": "종료시간",
+      "description": "전원 자동 차단 타이머"
+    },
+    "HallEffSensitivity": {
+      "displayText": "홀센서감도",
+      "description": "홀 효과 센서 스탠드 감도"
+    },
+    "HallEffSleepTimeout": {
+      "displayText": "HallSensor\nSleepTime",
+      "description": "홀 센서 감지 시 절전 진입 타이머"
+    },
+    "TemperatureUnit": {
+      "displayText": "온도단위",
+      "description": "온도 표기 단위 (C / F)"
+    },
+    "DisplayRotation": {
+      "displayText": "화면방향",
+      "description": "화면 표시 방향 (오른손/왼손/자동)"
+    },
+    "CooldownBlink": {
+      "displayText": "냉각점멸",
+      "description": "냉각 중 화면 온도 점멸 표시"
+    },
+    "ScrollingSpeed": {
+      "displayText": "스크롤속도",
+      "description": "메뉴 설명 텍스트 스크롤 속도"
+    },
+    "ReverseButtonTempChange": {
+      "displayText": "버튼반전",
+      "description": "온도 조절 버튼 기능 반전"
+    },
+    "ReverseButtonSettings": {
+      "displayText": "메뉴버튼",
+      "description": "메뉴 이동 버튼 기능 반전"
+    },
+    "AnimSpeed": {
+      "displayText": "효과속도",
+      "description": "아이콘 및 화면 전환 애니메이션 속도"
+    },
+    "AnimLoop": {
+      "displayText": "효과반복",
+      "description": "애니메이션 무한 반복 여부"
+    },
+    "Brightness": {
+      "displayText": "화면밝기",
+      "description": "OLED 디스플레이 밝기 조절"
+    },
+    "ColourInversion": {
+      "displayText": "색상반전",
+      "description": "화면 흑백 반전 표시"
+    },
+    "LOGOTime": {
+      "displayText": "로고시간",
+      "description": "부팅 시 로고 표시 시간"
+    },
+    "AdvancedIdle": {
+      "displayText": "상태상세",
+      "description": "대기 화면에 상세 전압/온도 표시"
+    },
+    "AdvancedSoldering": {
+      "displayText": "가열상세",
+      "description": "가열 중 상세 전력/온도 정보 표시"
+    },
+    "BluetoothLE": {
+      "displayText": "블루투스",
+      "description": "BLE 무선 통신 활성화"
+    },
+    "PowerLimit": {
+      "displayText": "최대전력",
+      "description": "최대 출력 전력 제한"
+    },
+    "CalibrateCJC": {
+      "displayText": "팁보정",
+      "description": "인두팁 냉접점 온도 센서 보정"
+    },
+    "VoltageCalibration": {
+      "displayText": "전압보정",
+      "description": "입력 전압 측정값 정밀 보정"
+    },
+    "PowerPulsePower": {
+      "displayText": "펄스전력",
+      "description": "슬립 방지 펄스 소비 전력"
+    },
+    "PowerPulseWait": {
+      "displayText": "펄스주기",
+      "description": "슬립 방지 펄스 간격"
+    },
+    "PowerPulseDuration": {
+      "displayText": "펄스폭",
+      "description": "슬립 방지 펄스 지속 시간"
+    },
+    "SettingsReset": {
+      "displayText": "초기화",
+      "description": "모든 설정을 공장 출하 상태로 복원"
+    },
+    "LanguageSwitch": {
+      "displayText": "언어",
+      "description": "시스템 인터페이스 언어 선택"
+    },
+    "SolderingTipType": {
+      "displayText": "팁종류",
+      "description": "장착된 인두팁 모델 선택"
+    },
+    "BuzzerEnabled": {
+      "displayText": "부저음",
+      "description": "작동 알림 비프음 활성화"
+    }
+  }
+}
