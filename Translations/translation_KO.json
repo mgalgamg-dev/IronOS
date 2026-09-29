@@ -10,7 +10,7 @@
       "message": "초기화 완료"
     },
     "SettingsResetMessage": {
-      "message": "Certain settings\nchanged!"
+      "message": "설정 변경됨"
     },
     "NoAccelerometerMessage": {
       "message": "모션센서 없음"
@@ -87,38 +87,38 @@
   },
   "menuGroups": {
     "PowerMenu": {
-      "displayText": "Power\nsettings",
+      "displayText": "전원 설정",
       "description": ""
     },
     "SolderingMenu": {
-      "displayText": "Soldering\nsettings",
+      "displayText": "인두 설정",
       "description": ""
     },
     "PowerSavingMenu": {
-      "displayText": "Sleep\nmode",
+      "displayText": "대기 설정",
       "description": ""
     },
     "UIMenu": {
-      "displayText": "User\ninterface",
+      "displayText": "화면 설정",
       "description": ""
     },
     "AdvancedMenu": {
-      "displayText": "Advanced\nsettings",
+      "displayText": "고급 설정",
       "description": ""
     }
   },
   "menuValues": {
     "USBPDModeDefault": {
-      "displayText": "Default\nMode"
+      "displayText": "기본 모드"
     },
     "USBPDModeNoDynamic": {
       "displayText": "No\nDynamic"
     },
     "USBPDModeSafe": {
-      "displayText": "Safe\nMode"
+      "displayText": "안전 모드"
     },
     "TipTypeAuto": {
-      "displayText": "Auto\nSense"
+      "displayText": "자동 감지"
     },
     "TipTypeT12Long": {
       "displayText": "TS100\nLong"
